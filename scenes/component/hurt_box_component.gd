@@ -12,7 +12,5 @@ func _on_area_entered(area):
 	if health_component == null:
 		return 
 	
-	print("hit!")
-	print(health_component.current_health)
 	var hitbox_component = area as HitboxComponent
 	health_component.damage(hitbox_component.damage)
