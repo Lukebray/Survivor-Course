@@ -1,20 +1,16 @@
 extends CharacterBody2D
 
-@onready var visuals = $Visuals
 @onready var velocity_component = $VelocityComponent
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+@onready var visuals = $Visuals
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	velocity_component.accelerate_to_player()
 	velocity_component.move(self)
 	
 	var move_sign = sign(velocity.x)
 	if move_sign != 0:
-		visuals.scale = Vector2(-move_sign, 1)
+		visuals.scale = Vector2(move_sign, 1)
+		
 
 func get_direction_to_player():
 	var player_node = get_tree().get_first_node_in_group("player") as Node2D
