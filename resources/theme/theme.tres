@@ -1,7 +1,15 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c4acrx8c1lkxq"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c4acrx8c1lkxq"]
 
 [ext_resource type="FontFile" uid="uid://dqklfc5i6h4pm" path="res://resources/theme/Bitfantasy.ttf" id="1_mowoc"]
 [ext_resource type="Texture2D" uid="uid://dlrv1jm85qj68" path="res://assets/ui/ui.png" id="1_sn6nm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dorwy"]
+texture = ExtResource("1_sn6nm")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(18, 2, 12, 12)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_svg0a"]
 texture = ExtResource("1_sn6nm")
@@ -11,7 +19,13 @@ texture_margin_right = 4.0
 texture_margin_bottom = 3.0
 region_rect = Rect2(0, 0, 16, 16)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mv2hr"]
+bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+
 [resource]
 default_font = ExtResource("1_mowoc")
 default_font_size = 16
+CustomPanelContainer/base_type = &"PanelContainer"
+CustomPanelContainer/styles/panel = SubResource("StyleBoxTexture_dorwy")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_svg0a")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_mv2hr")

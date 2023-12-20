@@ -10,6 +10,8 @@ const DIFFICULTY_INTERVAL = 5
 
 var arena_difficulty = 0
 
+func _ready():
+	print("start -> ", arena_difficulty)
 
 func get_time_elapsed():
 	return timer.wait_time - timer.time_left
@@ -20,6 +22,7 @@ func _process(delta):
 	if timer.time_left <= next_time_target:
 		arena_difficulty += 1
 		arena_difficulty_increased.emit(arena_difficulty)
+		print("changed -> ", arena_difficulty)
 
 
 func _on_timer_timeout():

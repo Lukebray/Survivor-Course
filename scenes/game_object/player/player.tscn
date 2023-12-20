@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0433p1p0qel0"]
+[gd_scene load_steps=12 format=3 uid="uid://c0433p1p0qel0"]
 
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_nt6ma"]
 [ext_resource type="Texture2D" uid="uid://ciyfh2hspitxw" path="res://scenes/game_object/player/player.png" id="1_tmhht"]
@@ -91,10 +91,7 @@ _data = {
 "walk": SubResource("Animation_wed0t")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kn27f"]
-bg_color = Color(0.247059, 0.14902, 0.192157, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wnhj5"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3naa5"]
 bg_color = Color(0.262745, 0.882353, 0.701961, 1)
 border_width_left = 1
 border_width_top = 1
@@ -138,8 +135,7 @@ offset_top = -22.0
 offset_right = 16.0
 offset_bottom = -18.0
 pivot_offset = Vector2(16, 2)
-theme_override_styles/background = SubResource("StyleBoxFlat_kn27f")
-theme_override_styles/fill = SubResource("StyleBoxFlat_wnhj5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3naa5")
 max_value = 1.0
 value = 0.5
 show_percentage = false

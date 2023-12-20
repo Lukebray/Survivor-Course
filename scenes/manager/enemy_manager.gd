@@ -17,7 +17,6 @@ func _ready():
 	arena_time_manager.arena_difficulty_increased.connect(_on_arena_difficulty_increased)
 
 
-
 func get_spawn_position():
 	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if player == null:
@@ -60,7 +59,7 @@ func _on_arena_difficulty_increased(arena_difficulty : int):
 	time_off = min(time_off, 0.7)
 	timer.wait_time = base_spawn_time - time_off
 	
-	if arena_difficulty == 1: #30 seconds in
+	if arena_difficulty == 6: #30 seconds in
 		enemy_table.add_item(wizard_enemy_scene, 20)
 		
 	
