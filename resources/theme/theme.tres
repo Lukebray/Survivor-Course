@@ -1,7 +1,33 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c4acrx8c1lkxq"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c4acrx8c1lkxq"]
 
 [ext_resource type="FontFile" uid="uid://dqklfc5i6h4pm" path="res://resources/theme/Bitfantasy.ttf" id="1_mowoc"]
 [ext_resource type="Texture2D" uid="uid://dlrv1jm85qj68" path="res://assets/ui/ui.png" id="1_sn6nm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwml0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r3hux"]
+texture = ExtResource("1_sn6nm")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(20, 20, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjxgs"]
+texture = ExtResource("1_sn6nm")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(4, 20, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6c82f"]
+texture = ExtResource("1_sn6nm")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(4, 20, 8, 8)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dorwy"]
 texture = ExtResource("1_sn6nm")
@@ -25,6 +51,14 @@ bg_color = Color(0.247059, 0.14902, 0.192157, 1)
 [resource]
 default_font = ExtResource("1_mowoc")
 default_font_size = 16
+Button/colors/font_color = Color(0.247059, 0.14902, 0.192157, 1)
+Button/colors/font_focus_color = Color(0.247059, 0.14902, 0.192157, 1)
+Button/colors/font_hover_color = Color(0.247059, 0.14902, 0.192157, 1)
+Button/colors/font_pressed_color = Color(0.247059, 0.14902, 0.192157, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_iwml0")
+Button/styles/hover = SubResource("StyleBoxTexture_r3hux")
+Button/styles/normal = SubResource("StyleBoxTexture_gjxgs")
+Button/styles/pressed = SubResource("StyleBoxTexture_6c82f")
 CustomPanelContainer/base_type = &"PanelContainer"
 CustomPanelContainer/styles/panel = SubResource("StyleBoxTexture_dorwy")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_svg0a")

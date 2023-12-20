@@ -7,4 +7,4 @@ script = ExtResource("1_51bgu")
 id = "axe_damage"
 max_quantity = 0
 name = "Axe Damage"
-description = "Increases theaxe damage rate by 10%"
+description = "Increases axe damage rate by 10%"
