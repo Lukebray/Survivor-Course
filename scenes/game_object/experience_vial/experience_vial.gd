@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var sprite = $Sprite2D
+@onready var collision_shape_2d = $Area2D/CollisionShape2D
 
 
 func _ready():
@@ -21,10 +22,17 @@ func tween_collect(percent : float, start_position : Vector2):
 
 func collect():
 	GameEvents.emit_experience_vial_collected(1)
+	$RandomStreamPlayer2DComponent.play_random()
+	await $RandomStreamPlayer2DComponent.finished
 	queue_free()
 
 
+func disable_collision():
+	collision_shape_2d.disabled = true
+
+
 func _on_area_2d_area_entered(area):
+	Callable(disable_collision).call_deferred()
 	var tween = create_tween()
 	tween.set_parallel()
 	tween.tween_method(tween_collect.bind(global_position), 0.0, 1.0, 0.5)\

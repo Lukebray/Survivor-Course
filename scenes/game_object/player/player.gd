@@ -70,6 +70,7 @@ func _on_damage_interval_timer_timeout():
 func _on_health_changed():
 	GameEvents.emit_player_damaged()
 	update_health_display()
+	$HitRandomStreamPlayer.play_random()
 	
 
 func _on_ability_upgrade_added(ability_upgrade : AbilityUpgrade, current_upgrades : Dictionary):
